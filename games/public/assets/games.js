@@ -902,7 +902,8 @@ const FriendGames = (() => {
         alive: true,
         body: false,
         target: { x: room.x + 40 + Math.random() * (room.w - 80), y: room.y + 35 + Math.random() * (room.h - 70) },
-        suspicion: 0
+        suspicion: 0,
+        memory: "No clues yet."
       };
     });
     let logs = ["You are the impostor. Stay close to a bot, then press Kill."];
@@ -910,6 +911,8 @@ const FriendGames = (() => {
     let taskProgress = 0;
     let sabotageTimer = 0;
     let meetingOpen = false;
+    let aiThinking = false;
+    let nextAiRoamAt = 0;
     let over = false;
 
     const addLog = (message) => {
@@ -922,9 +925,60 @@ const FriendGames = (() => {
     const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
     const nearestAliveBot = () => bots.filter((bot) => bot.alive).sort((a, b) => distance(player, a) - distance(player, b))[0];
     const nearestBody = () => bots.filter((bot) => bot.body).sort((a, b) => distance(player, a) - distance(player, b))[0];
+    const roomFor = (person) => rooms.find((room) => inside(person.x, person.y, room))?.name || "Hallway";
+    const pointInRoom = (roomName) => {
+      const area = rooms.find((room) => room.name === roomName) || playAreas[Math.floor(Math.random() * playAreas.length)];
+      return { x: area.x + 25 + Math.random() * (area.w - 50), y: area.y + 25 + Math.random() * (area.h - 50) };
+    };
     const randomPoint = () => {
       const area = playAreas[Math.floor(Math.random() * playAreas.length)];
       return { x: area.x + 25 + Math.random() * (area.w - 50), y: area.y + 25 + Math.random() * (area.h - 50) };
+    };
+    const crewState = (action, reason = "") => ({
+      action,
+      reason,
+      rooms: rooms.map((room) => room.name),
+      player: { room: roomFor(player), x: Math.round(player.x), y: Math.round(player.y), killCooldown: Math.ceil(killCooldown) },
+      aliveBots: bots.filter((bot) => bot.alive).map((bot) => bot.name),
+      bodyCount: bots.filter((bot) => bot.body).length,
+      bodies: bots.filter((bot) => bot.body).map((bot) => ({ name: bot.name, room: roomFor(bot) })),
+      suspicions: bots.map((bot) => ({
+        name: bot.name,
+        alive: bot.alive,
+        room: roomFor(bot),
+        suspicion: bot.suspicion,
+        memory: bot.memory
+      })),
+      taskProgress: Math.floor(taskProgress),
+      sabotageActive: sabotageTimer > 0,
+      recentLog: logs.slice(0, 5)
+    });
+    const askCrewBrain = async (action, reason = "") => {
+      const response = await fetch("/api/crew-brain", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(crewState(action, reason))
+      });
+      if (!response.ok) throw new Error("Crew brain failed");
+      return response.json();
+    };
+    const requestAiRoam = async () => {
+      if (aiThinking || over || meetingOpen || Date.now() < nextAiRoamAt) return;
+      aiThinking = true;
+      nextAiRoamAt = Date.now() + 7000;
+      try {
+        const data = await askCrewBrain("movement", "free roam");
+        (data.goals || []).forEach((goal) => {
+          const bot = bots.find((candidate) => candidate.name === goal.name && candidate.alive);
+          if (!bot) return;
+          bot.target = pointInRoom(goal.targetRoom);
+          if (goal.comment && Math.random() < 0.45) addLog(goal.comment);
+        });
+      } catch {
+        bots.filter((bot) => bot.alive).forEach((bot) => { bot.target = randomPoint(); });
+      } finally {
+        aiThinking = false;
+      }
     };
     const updateButtons = () => {
       const killTarget = nearestAliveBot();
@@ -951,37 +1005,68 @@ const FriendGames = (() => {
       target.alive = false;
       target.body = true;
       target.suspicion += 2;
+      target.memory = "I was eliminated before I could explain.";
       killCooldown = 9;
-      bots.filter((bot) => bot.alive && distance(bot, target) < 150).forEach((bot) => { bot.suspicion += 2; });
+      bots.filter((bot) => bot.alive && distance(bot, target) < 150).forEach((bot) => {
+        bot.suspicion += 2;
+        bot.memory = `I was near ${roomFor(target)} when ${target.name} vanished.`;
+      });
       addLog(`${target.name} was killed.`);
       checkWin();
     };
-    const startMeeting = (reason) => {
-      if (over || meetingOpen) return;
-      meetingOpen = true;
+    const runLocalMeeting = (reason) => {
       const living = bots.filter((bot) => bot.alive);
       const suspicion = living.reduce((sum, bot) => sum + bot.suspicion, 0);
       const chanceToCatchYou = Math.min(0.78, 0.16 + suspicion * 0.08 + bots.filter((bot) => bot.body).length * 0.1);
-      const caught = Math.random() < chanceToCatchYou;
-      addLog(`${reason} Meeting called. Bots are voting...`);
-      setTimeout(() => {
-        if (caught) {
-          endGame("You were voted out. Crew wins.");
-          return;
-        }
-        const ejected = living.sort((a, b) => b.suspicion - a.suspicion)[0] || living[0];
-        if (ejected) {
-          ejected.alive = false;
-          ejected.body = false;
-          addLog(`${ejected.name} was ejected. They were not the impostor.`);
-        } else {
-          addLog("No one was ejected.");
-        }
-        bots.forEach((bot) => { bot.body = false; bot.suspicion = Math.max(0, bot.suspicion - 1); });
-        meetingOpen = false;
-        killCooldown = Math.max(killCooldown, 4);
-        checkWin();
-      }, 1200);
+      const caughtPlayer = Math.random() < chanceToCatchYou;
+      const ejected = living.sort((a, b) => b.suspicion - a.suspicion)[0] || living[0];
+      return {
+        messages: [
+          `${living[0]?.name || "Milo"}: I saw suspicious movement near ${roomFor(player)}.`,
+          `${living[1]?.name || "Ari"}: The body count is ${bots.filter((bot) => bot.body).length}.`,
+          `${living[2]?.name || "Nova"}: I am voting for whoever has the weakest alibi.`
+        ],
+        caughtPlayer,
+        ejectedName: caughtPlayer ? "You" : ejected?.name,
+        summary: caughtPlayer ? "The crew pieced together enough clues." : `${ejected?.name || "Nobody"} got the most votes.`
+      };
+    };
+    const finishMeeting = (decision) => {
+      (decision.messages || []).slice(0, 4).reverse().forEach((message) => addLog(message));
+      if (decision.caughtPlayer || decision.ejectedName === "You") {
+        endGame("You were voted out. Crew wins.");
+        return;
+      }
+      const ejected = bots.find((bot) => bot.name === decision.ejectedName && bot.alive) ||
+        bots.filter((bot) => bot.alive).sort((a, b) => b.suspicion - a.suspicion)[0];
+      if (ejected) {
+        ejected.alive = false;
+        ejected.body = false;
+        addLog(`${ejected.name} was ejected. They were not the impostor.`);
+      } else {
+        addLog("No one was ejected.");
+      }
+      if (decision.summary) addLog(decision.summary);
+      bots.forEach((bot) => {
+        bot.body = false;
+        bot.suspicion = Math.max(0, bot.suspicion - 1);
+        if (bot.alive) bot.memory = "Meeting ended. I am watching for the next clue.";
+      });
+      meetingOpen = false;
+      killCooldown = Math.max(killCooldown, 4);
+      checkWin();
+    };
+    const startMeeting = async (reason) => {
+      if (over || meetingOpen) return;
+      meetingOpen = true;
+      addLog(`${reason} Meeting called. Bots are thinking...`);
+      try {
+        const data = await askCrewBrain("meeting", reason);
+        addLog(data.source === "openai" ? "OpenAI is directing this meeting." : "Local bot logic is directing this meeting.");
+        setTimeout(() => finishMeeting(data), 700);
+      } catch {
+        setTimeout(() => finishMeeting(runLocalMeeting(reason)), 700);
+      }
     };
     const report = () => {
       const body = nearestBody();
@@ -992,8 +1077,12 @@ const FriendGames = (() => {
       if (sabotageTimer > 0 || over || meetingOpen) return;
       sabotageTimer = 18;
       taskProgress = Math.max(0, taskProgress - 10);
-      bots.forEach((bot) => { bot.target = randomPoint(); });
+      bots.forEach((bot) => {
+        bot.target = randomPoint();
+        bot.memory = "Sabotage pulled everyone out of position.";
+      });
       addLog("Sabotage triggered. Bots are distracted.");
+      requestAiRoam();
     };
     const drawCrewmate = (person, label, isBody = false) => {
       ctx.save();
@@ -1066,6 +1155,7 @@ const FriendGames = (() => {
         if (walkable(nextX, bot.y)) bot.x = nextX;
         if (walkable(bot.x, nextY)) bot.y = nextY;
         if (bots.some((body) => body.body && distance(bot, body) < 50) && Math.random() < 0.006) {
+          bot.memory = `I found a body in ${roomFor(bot)}.`;
           startMeeting(`${bot.name} found a body.`);
         }
       });
@@ -1074,6 +1164,7 @@ const FriendGames = (() => {
       if (!over && !meetingOpen) {
         movePlayer();
         moveBots();
+        requestAiRoam();
         taskProgress += sabotageTimer > 0 ? 0.006 : 0.018;
         killCooldown = Math.max(0, killCooldown - 1 / 60);
         sabotageTimer = Math.max(0, sabotageTimer - 1 / 60);

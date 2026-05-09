@@ -144,6 +144,44 @@ function fallbackCrewBot(body) {
   return lines[Math.floor(Math.random() * lines.length)];
 }
 
+function fallbackCrewBrain(body) {
+  const aliveBots = body.aliveBots || ["Milo", "Ari", "Nova", "Sam", "Jules"];
+  const rooms = body.rooms || ["Cafeteria", "Weapons", "Navigation", "Med Bay", "Electrical", "Engine"];
+
+  if (body.action === "movement") {
+    return {
+      goals: aliveBots.map((name, index) => ({
+        name,
+        targetRoom: rooms[(index + Math.floor(Math.random() * rooms.length)) % rooms.length],
+        comment: Math.random() < 0.25 ? `${name}: heading to check tasks.` : ""
+      }))
+    };
+  }
+
+  const mostSuspicious =
+    (body.suspicions || []).sort((a, b) => b.suspicion - a.suspicion)[0]?.name || aliveBots[0];
+  const caughtPlayer = Math.random() < Math.min(0.78, 0.14 + (body.bodyCount || 0) * 0.14);
+
+  return {
+    messages: [
+      `${aliveBots[0] || "Milo"}: I want everyone to explain where they were.`,
+      `${aliveBots[1] || "Ari"}: The timing feels suspicious near ${body.reason || "the report"}.`,
+      `${aliveBots[2] || "Nova"}: I am voting based on who was closest.`
+    ],
+    caughtPlayer,
+    ejectedName: caughtPlayer ? "You" : mostSuspicious,
+    summary: caughtPlayer ? "The crew connected the clues and voted you out." : `${mostSuspicious} got the most votes.`
+  };
+}
+
+function extractResponseText(data) {
+  return (
+    data.output_text ||
+    data.output?.flatMap((item) => item.content || []).find((item) => item.text)?.text ||
+    ""
+  );
+}
+
 async function handleCrewBot(req, res) {
   if (!isAuthed(req)) {
     send(res, 401, JSON.stringify({ ok: false, message: "Log in first." }), {
@@ -182,16 +220,65 @@ async function handleCrewBot(req, res) {
         })
       });
       const data = await response.json();
-      const message =
-        data.output_text ||
-        data.output?.flatMap((item) => item.content || []).find((item) => item.text)?.text ||
-        fallbackCrewBot(body);
+      const message = extractResponseText(data) || fallbackCrewBot(body);
 
       send(res, 200, JSON.stringify({ ok: true, source: "openai", message }), {
         "Content-Type": "application/json; charset=utf-8"
       });
     } catch {
       send(res, 200, JSON.stringify({ ok: true, source: "local", message: fallbackCrewBot(body) }), {
+        "Content-Type": "application/json; charset=utf-8"
+      });
+    }
+  });
+}
+
+async function handleCrewBrain(req, res) {
+  if (!isAuthed(req)) {
+    send(res, 401, JSON.stringify({ ok: false, message: "Log in first." }), {
+      "Content-Type": "application/json; charset=utf-8"
+    });
+    return;
+  }
+
+  readJsonBody(req, async (parseError, body) => {
+    if (parseError) {
+      send(res, 400, JSON.stringify({ ok: false, message: "Invalid request." }), {
+        "Content-Type": "application/json; charset=utf-8"
+      });
+      return;
+    }
+
+    const fallback = fallbackCrewBrain(body);
+    if (!OPENAI_API_KEY) {
+      send(res, 200, JSON.stringify({ ok: true, source: "local", ...fallback }), {
+        "Content-Type": "application/json; charset=utf-8"
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+          model: OPENAI_MODEL,
+          instructions:
+            "You are the AI director for an original top-down social deduction browser game. Return only valid compact JSON. For action=meeting, return {\"messages\":[short bot discussion lines],\"caughtPlayer\":boolean,\"ejectedName\":\"You or bot name\",\"summary\":\"short result\"}. For action=movement, return {\"goals\":[{\"name\":\"bot name\",\"targetRoom\":\"room name\",\"comment\":\"optional short line\"}]}. Use the supplied evidence, suspicion, bodies, and player behavior. Bots can accuse, lie, split up, investigate bodies, and vote strategically. Keep it game-like and concise.",
+          input: JSON.stringify(body).slice(0, 5000)
+        })
+      });
+      const data = await response.json();
+      const text = extractResponseText(data);
+      const parsed = text ? JSON.parse(text) : fallback;
+      send(res, 200, JSON.stringify({ ok: true, source: "openai", ...fallback, ...parsed }), {
+        "Content-Type": "application/json; charset=utf-8"
+      });
+    } catch {
+      send(res, 200, JSON.stringify({ ok: true, source: "local", ...fallback }), {
         "Content-Type": "application/json; charset=utf-8"
       });
     }
@@ -208,6 +295,11 @@ const server = http.createServer((req, res) => {
 
   if (req.method === "POST" && requestPath === "/api/crew-bot") {
     handleCrewBot(req, res);
+    return;
+  }
+
+  if (req.method === "POST" && requestPath === "/api/crew-brain") {
+    handleCrewBrain(req, res);
     return;
   }
 
