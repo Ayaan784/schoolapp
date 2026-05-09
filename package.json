@@ -1,0 +1,11 @@
+{
+  "name": "schoolapp-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd games && npm start"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
