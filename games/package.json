@@ -1,0 +1,13 @@
+{
+  "name": "friend-games-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A clean, school-appropriate browser games hub for friends.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
