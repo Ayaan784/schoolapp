@@ -13,3 +13,4 @@
   from = "/*"
   to = "/.netlify/functions/site?path=:splat"
   status = 200
+  force = true
