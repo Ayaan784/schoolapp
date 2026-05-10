@@ -1,0 +1,15 @@
+[build]
+  publish = "games/public"
+  command = "npm run build"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Netlify deploy note:
+# This sends every request through one tiny function so the shared password
+# stays in environment variables instead of being hardcoded in browser files.
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/site?path=:splat"
+  status = 200

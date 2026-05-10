@@ -22,26 +22,20 @@ OPENAI_API_KEY="your-api-key" FRIEND_GAMES_PASSWORD="choose-a-password" npm star
 
 You can also set `OPENAI_MODEL` if you want to use a different compatible model.
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-This project includes `vercel.json` and `api/index.js` so it can run on Vercel without a long-running server.
+This repo includes root-level `netlify.toml` and `netlify/functions/site.js`, so Netlify can serve the site with the same password protection and API routes.
 
-If this app is inside a larger repository, set the Vercel root directory to:
-
-```txt
-games
-```
-
-Use these Vercel settings:
+Use these Netlify settings:
 
 ```txt
-Framework Preset: Other
-Build Command: npm install
-Output Directory: leave blank
-Install Command: npm install
+Base directory: leave blank
+Build command: npm run build
+Publish directory: games/public
+Functions directory: netlify/functions
 ```
 
-Add these environment variables in Vercel Project Settings:
+Add these environment variables in Netlify Site Settings:
 
 ```txt
 FRIEND_GAMES_PASSWORD=choose-a-password
@@ -50,6 +44,10 @@ OPENAI_MODEL=gpt-4.1-mini
 ```
 
 `OPENAI_API_KEY` is optional, but Space Crew Bots uses it for smarter bot movement and meetings when it is present.
+
+## Deploy on Vercel
+
+Vercel can still run this project with `vercel.json` and `api/index.js`, but Netlify is the recommended setup for this app.
 
 ## Change the Password
 

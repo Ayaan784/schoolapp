@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "build": "node -e \"console.log('Friend Games Hub is ready for Netlify')\"",
     "start": "cd games && npm start"
   },
   "engines": {
