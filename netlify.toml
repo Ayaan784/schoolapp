@@ -5,6 +5,7 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+  included_files = ["games/public/**"]
 
 # Netlify deploy note:
 # This sends every request through one tiny function so the shared password

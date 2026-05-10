@@ -2,7 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const PUBLIC_DIR = path.join(process.cwd(), "games", "public");
+const PUBLIC_DIR_CANDIDATES = [
+  path.join(process.cwd(), "games", "public"),
+  path.join(process.cwd(), "public"),
+  path.join(__dirname, "../../games/public")
+];
+const PUBLIC_DIR = PUBLIC_DIR_CANDIDATES.find((dir) => fs.existsSync(path.join(dir, "login.html"))) ||
+  PUBLIC_DIR_CANDIDATES[0];
 const SITE_PASSWORD = process.env.FRIEND_GAMES_PASSWORD;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4.1-mini";
