@@ -103,11 +103,15 @@ function serveFile(event, requestPath) {
   const data = fs.readFileSync(filePath);
   const isText = textExtensions.has(ext);
 
+  const cacheControl = requestPath.match(/\.(png|jpe?g|svg|ico)$/)
+    ? "public, max-age=31536000, immutable"
+    : "no-cache";
+
   return {
     statusCode: 200,
     headers: {
       "Content-Type": mimeTypes[ext] || "application/octet-stream",
-      ...(requestPath.startsWith("/assets/") ? { "Cache-Control": "public, max-age=31536000, immutable" } : {})
+      "Cache-Control": cacheControl
     },
     body: isText ? data.toString("utf8") : data.toString("base64"),
     isBase64Encoded: !isText
