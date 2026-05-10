@@ -232,11 +232,29 @@ a:active {
 }
 
 .game-card-art {
-  height: 82px;
+  position: relative;
+  height: 132px;
+  background: var(--accent);
+  isolation: isolate;
+}
+
+.game-card-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background:
-    radial-gradient(circle at 18% 20%, rgba(255,255,255,0.62), transparent 30%),
-    linear-gradient(135deg, rgba(255,255,255,0.35), transparent),
-    var(--accent);
+    linear-gradient(135deg, rgba(255, 214, 228, 0.16), rgba(151, 205, 239, 0.2)),
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.52), transparent 34%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+  pointer-events: none;
+}
+
+.game-card-art img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .game-card.coral { --accent: var(--coral); }

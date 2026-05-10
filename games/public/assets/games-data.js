@@ -1,5 +1,7 @@
 // Add more games by adding a new object here, creating a matching HTML page
 // in /public/games, and adding a renderer in /public/assets/games.js.
+// To change the shared thumbnail, replace /public/assets/game-thumbnail.png.
+// To give one game its own thumbnail, add: thumbnail: "/assets/your-image.png".
 window.FRIEND_GAMES = [
   {
     id: "tic-tac-toe",

@@ -4,7 +4,9 @@ window.FRIEND_GAMES.forEach((game) => {
   const card = document.createElement("article");
   card.className = `game-card ${game.color}`;
   card.innerHTML = `
-    <div class="game-card-art" aria-hidden="true"></div>
+    <div class="game-card-art" aria-hidden="true">
+      <img src="${game.thumbnail || "/assets/game-thumbnail.png"}" alt="" loading="lazy">
+    </div>
     <div class="game-card-body">
       <h3>${game.name}</h3>
       <p>${game.description}</p>
