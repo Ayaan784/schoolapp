@@ -74,6 +74,13 @@ window.FRIEND_GAMES = [
     color: "sky"
   },
   {
+    id: "flappy-bird",
+    name: "Flappy Bird",
+    description: "Tap, click, or press space to flap through the pipes and chase a high score.",
+    page: "/games/flappy-bird.html",
+    color: "gold"
+  },
+  {
     id: "traffic-racer",
     name: "Traffic Racer",
     description: "Dodge cars, switch lanes, and see how long you can keep driving.",
