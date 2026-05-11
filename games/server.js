@@ -10,9 +10,7 @@ const PUBLIC_DIR = path.join(__dirname, "public");
 // Change the site password by setting this environment variable before starting:
 // FRIEND_GAMES_PASSWORD="your new password" npm start
 // The password is intentionally not hardcoded in this project.
-//oldbit \/
-// const SITE_PASSWORD = process.env.FRIEND_GAMES_PASSWORD;
-const SITE_PASSWORD = "thisisatestdontleavethisherepermanantly";
+const SITE_PASSWORD = process.env.FRIEND_GAMES_PASSWORD;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4.1-mini";
 const COOKIE_NAME = "friend_games_auth";
