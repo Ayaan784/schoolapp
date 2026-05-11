@@ -1,0 +1,76 @@
+{
+  "games": [
+    {
+      "page": "/games/2048.html",
+      "name": "2048",
+      "description": "Play this game from the catalog.",
+      "color": "coral"
+    },
+    {
+      "page": "/games/connect-four.html",
+      "name": "Connect Four",
+      "description": "Play this game from the catalog.",
+      "color": "sky"
+    },
+    {
+      "page": "/games/eggy-hill-drive.html",
+      "name": "Eggy Hill Drive",
+      "description": "Play this game from the catalog.",
+      "color": "leaf"
+    },
+    {
+      "page": "/games/flappy-bird.html",
+      "name": "Flappy Bird",
+      "description": "Play this game from the catalog.",
+      "color": "gold"
+    },
+    {
+      "page": "/games/hangman.html",
+      "name": "Hangman",
+      "description": "Play this game from the catalog.",
+      "color": "mint"
+    },
+    {
+      "page": "/games/memory-match.html",
+      "name": "Memory Match",
+      "description": "Play this game from the catalog.",
+      "color": "plum"
+    },
+    {
+      "page": "/games/quiz.html",
+      "name": "Quiz",
+      "description": "Play this game from the catalog.",
+      "color": "teal"
+    },
+    {
+      "page": "/games/rock-paper-scissors.html",
+      "name": "Rock Paper Scissors",
+      "description": "Play this game from the catalog.",
+      "color": "berry"
+    },
+    {
+      "page": "/games/snake.html",
+      "name": "Snake",
+      "description": "Play this game from the catalog.",
+      "color": "coral"
+    },
+    {
+      "page": "/games/space-crew-bots.html",
+      "name": "Space Crew Bots",
+      "description": "Play this game from the catalog.",
+      "color": "sky"
+    },
+    {
+      "page": "/games/tic-tac-toe.html",
+      "name": "Tic Tac Toe",
+      "description": "Play this game from the catalog.",
+      "color": "leaf"
+    },
+    {
+      "page": "/games/traffic-racer.html",
+      "name": "Traffic Racer",
+      "description": "Play this game from the catalog.",
+      "color": "gold"
+    }
+  ]
+}

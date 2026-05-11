@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { listHtmlGames } = require("../lib/games-catalog");
 
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 const SITE_PASSWORD = process.env.FRIEND_GAMES_PASSWORD;
@@ -292,6 +293,16 @@ module.exports = async function handler(req, res) {
 
   if (req.method === "POST" && requestPath === "/api/crew-brain") {
     await handleCrewBrain(req, res);
+    return;
+  }
+
+  if (req.method === "GET" && requestPath === "/api/games") {
+    if (!isAuthed(req)) {
+      sendJson(res, 401, { ok: false, message: "Log in first." });
+      return;
+    }
+    const games = listHtmlGames(PUBLIC_DIR);
+    sendJson(res, 200, { ok: true, games }, { "Cache-Control": "no-store" });
     return;
   }
 

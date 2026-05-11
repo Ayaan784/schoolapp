@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { listHtmlGames } = require("../../games/lib/games-catalog");
 
 const PUBLIC_DIR_CANDIDATES = [
   path.join(process.cwd(), "games", "public"),
@@ -269,6 +270,21 @@ exports.handler = async function handler(event) {
 
   if (method === "POST" && requestPath === "/api/crew-brain") {
     return handleCrewBrain(event);
+  }
+
+  if (method === "GET" && requestPath === "/api/games") {
+    if (!isAuthed(event)) {
+      return json(401, { ok: false, message: "Log in first." });
+    }
+    const games = listHtmlGames(PUBLIC_DIR);
+    return {
+      statusCode: 200,
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store"
+      },
+      body: JSON.stringify({ ok: true, games })
+    };
   }
 
   if (requestPath === "/logout" || requestPath === "/api/logout") {

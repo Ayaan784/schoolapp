@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { listHtmlGames } = require("./lib/games-catalog");
 
 const PORT = Number(process.env.PORT || 3000);
 const HOST = process.env.HOST || "127.0.0.1";
@@ -300,6 +301,21 @@ const server = http.createServer((req, res) => {
 
   if (req.method === "POST" && requestPath === "/api/crew-brain") {
     handleCrewBrain(req, res);
+    return;
+  }
+
+  if (req.method === "GET" && requestPath === "/api/games") {
+    if (!isAuthed(req)) {
+      send(res, 401, JSON.stringify({ ok: false, message: "Log in first." }), {
+        "Content-Type": "application/json; charset=utf-8"
+      });
+      return;
+    }
+    const games = listHtmlGames(PUBLIC_DIR);
+    send(res, 200, JSON.stringify({ ok: true, games }), {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store"
+    });
     return;
   }
 
