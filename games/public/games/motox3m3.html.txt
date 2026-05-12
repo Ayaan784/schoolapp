@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="noindex,nofollow" name="robots"/>
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+	<title>Moto X3m 3</title>
+	<meta content="&lt;p&gt;## Moto X3M 3: Ride the Edge of Adrenaline&lt;/p&gt;&lt;p&gt;Prepare for a heart-pounding adventure as you strap in for the latest installment in the thrilling Moto X3M series: &lt;strong&gt;Moto X3M 3&lt;/strong&gt;. This online motorcycle stunt game pushes the limits of daring, offering an exhilarating experience filled with death-defying leaps, mind-bending tracks, and a relentless quest for victory.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A World of Challenges:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Moto X3M 3 offers a vast array of challenging levels, each with its unique set of obstacles and demanding maneuvers. From twisting loops and precarious bridges to narrow gaps and treacherous ramps, every track demands your full attention and skill. The game features a mix of simple and complex levels, catering to both casual gamers and seasoned stuntmen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Unleash Your Inner Daredevil:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The game boasts a variety of motorcycles, each with its unique characteristics, allowing you to customize your riding style. Whether you prefer a nimble bike for swift turns or a powerful machine for high-flying jumps, there&#039;s a perfect ride for every player.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Master the Art of Stunts:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Moto X3M 3 isn&#039;t just about reaching the finish line; it&#039;s about conquering the challenges with style. The game rewards you for performing daring stunts like backflips, wheelies, and gravity-defying tricks. Mastering these moves is crucial to maximizing your score and unlocking new levels.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A Constant Flow of Thrills:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The game&#039;s fast-paced action and addictive gameplay will keep you hooked for hours. You&#039;ll be constantly on the edge of your seat, bracing for the next heart-stopping jump or nail-biting turn. With its intuitive controls and stunning visuals, Moto X3M 3 delivers an unforgettable gaming experience.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Beyond the Race:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;The game offers a variety of features to enhance your gaming experience. You can compete against friends and other players globally on the leaderboards, showcasing your stuntman skills. The game also boasts a variety of customization options, allowing you to personalize your bike and character.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;More Than Just a Game:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Moto X3M 3 is more than just a game; it&#039;s a portal to a world of adrenaline-fueled action. Whether you&#039;re a seasoned gamer or a casual player looking for a quick thrill, Moto X3M 3 is an excellent choice for a fun and challenging experience. So, gear up, rev your engine, and prepare to take on the ultimate stunt challenge! &lt;/p&gt;"
+	      name="description">
+	<meta content="/imgs/motox3m3.png" property="og:image">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+	      type="text/css"/>
+	<link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="EggyCar" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link href="/style/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="/style/jquery-comments.css" rel="stylesheet" type="text/css"/>
+	<link href="/style/user.css" rel="stylesheet" type="text/css"/>
+	<link href="/style/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/style/custom.css" rel="stylesheet" type="text/css"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+	      type="text/css"/>
+	<link href="https://fonts.googleapis.com/" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com/" rel="preconnect">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+		rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H07HBWNKRF"></script>
+	<script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-H07HBWNKRF');
+	</script>
+</head>
+<body id="page-top">
+<style type="text/css">
+    .mry_1 {
+        margin-top: 15px !important;
+        width: 300px;
+        height: 250px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .mry_2 {
+        margin-top: 15px !important;
+        width: 970px;
+        text-align: center;
+        height: 250px;
+        margin: 0 auto;
+    }
+</style>
+<!-- Navigation-->
+<div class="container site-container">
+	<div class="site-content">
+		<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
+			<div class="container">
+				<button aria-expanded="false" class="navbar-toggler navbar-toggler-left collapsed" data-target="#navb"
+				        data-toggle="collapse" type="button">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand js-scroll-trigger site-logo" href="/">Eggy Car</a>
+				<div class="navbar-collapse collapse justify-content-end" id="navb">
+					<ul class="navbar-nav ml-auto text-uppercase">
+						<li class="nav-item"><a class="nav-link" data-toggle="dropdown" href="#">Games<i
+							class="dropdown-icon fa fa-caret-down"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="nav-item-child"><a class="nav-link-child"
+								                              href="/new-unblocked-games">NEW GAMES</a></li>
+								<li class="nav-item-child"><a class="nav-link-child"
+								                              href="/popular-unblocked-games">POPULAR GAMES</a></li>
+							</ul>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0 search-bar">
+						<div class="input-group">
+							<input name="viewpage" type="hidden" value="search"/>
+							<input class="form-control rounded-left search" id="search-input" minlength="2"
+							       name="slug" placeholder="Search game" required type="text"/>
+							<div class="input-group-append">
+								<button class="btn btn-search" type="submit" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+						<div class="search-results" id="search-results" style="display:none;"></div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="nav-categories">
+		<div class="container">
+			<nav class='greedy'>
+				<ul class="links list-categories">
+					<a href="/category/running-games">
+						<li>Running Games</li>
+					</a>
+					<a href="/category/car-games">
+						<li>Car Games</li>
+					</a>
+					<a href="/category/skill-games">
+						<li>Skill Games</li>
+					</a>
+					<a href="/category/multiplayer-games">
+						<li>Multiplayer Games</li>
+					</a>
+					<a href="/category/puzzle-games">
+						<li>Puzzle Games</li>
+					</a>
+					<a href="/category/unblocked-games">
+						<li>Unblocked Games</li>
+					</a>
+					<a href="/category/io-games">
+						<li>IO Games</li>
+					</a>
+				</ul>
+				<button>More</button>
+				<ul class='hidden-links hidden'></ul>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<div class="game-container">
+			<div class="content-wrapper">
+				<div class="row">
+					<div class="col-md-9 game-content">
+						<div class="game-iframe-container">
+							<div class="skip_screen">
+								<img src="/imgs/motox3m3.png">
+								<div class="skip_play" onclick="skip_play();">PLAY</div>
+							</div>
+							<iframe allowfullscreen class="game-iframe" frameborder="0" height="480" id="game-area"
+							        scrolling="none" src="" width="640"></iframe>
+						</div>
+						<div class="single-info-container">
+							<div class="header-left">
+								<h1 class="single-title">moto x3m 3 Unblocked</h1>
+							</div>
+							<div class="action-btn">
+								<div class="single-icon"><i aria-hidden="true"
+								                            class="fa fa-external-link-square"></i><a href="#"
+								                                                      onclick="playGame('https://oc-fatih.github.io/g/motox3m3');"
+								                                                      target="_blank">Open in new window</a></div>
+								<div class="single-icon"><i aria-hidden="true" class="fa fa-expand"></i><a href="#"
+								                                                                           onclick="open_fullscreen()">Fullscreen</a></div>
+							</div>
+						</div>
+						<b>Description:</b>
+						<div class="single-description">
+							<p>## Moto X3M 3: Ride the Edge of Adrenaline</p>
+							<p>Prepare for a heart-pounding adventure as you strap in for the latest installment in
+								the thrilling Moto X3M series: <strong>Moto X3M 3</strong>. This online motorcycle
+								stunt game pushes the limits of daring, offering an exhilarating experience filled
+								with death-defying leaps, mind-bending tracks, and a relentless quest for victory.
+							</p>
+							<p><strong>A World of Challenges:</strong></p>
+							<p>Moto X3M 3 offers a vast array of challenging levels, each with its unique set of
+								obstacles and demanding maneuvers. From twisting loops and precarious bridges to
+								narrow gaps and treacherous ramps, every track demands your full attention and
+								skill. The game features a mix of simple and complex levels, catering to both casual
+								gamers and seasoned stuntmen.</p>
+							<p><strong>Unleash Your Inner Daredevil:</strong></p>
+							<p>The game boasts a variety of motorcycles, each with its unique characteristics,
+								allowing you to customize your riding style. Whether you prefer a nimble bike for
+								swift turns or a powerful machine for high-flying jumps, there's a perfect ride for
+								every player.</p>
+							<p><strong>Master the Art of Stunts:</strong></p>
+							<p>Moto X3M 3 isn't just about reaching the finish line; it's about conquering the
+								challenges with style. The game rewards you for performing daring stunts like
+								backflips, wheelies, and gravity-defying tricks. Mastering these moves is crucial to
+								maximizing your score and unlocking new levels.</p>
+							<p><strong>A Constant Flow of Thrills:</strong></p>
+							<p>The game's fast-paced action and addictive gameplay will keep you hooked for hours.
+								You'll be constantly on the edge of your seat, bracing for the next heart-stopping
+								jump or nail-biting turn. With its intuitive controls and stunning visuals, Moto X3M
+								3 delivers an unforgettable gaming experience.</p>
+							<p><strong>Beyond the Race:</strong></p>
+							<p>The game offers a variety of features to enhance your gaming experience. You can
+								compete against friends and other players globally on the leaderboards, showcasing
+								your stuntman skills. The game also boasts a variety of customization options,
+								allowing you to personalize your bike and character.</p>
+							<p><strong>More Than Just a Game:</strong></p>
+							<p>Moto X3M 3 is more than just a game; it's a portal to a world of adrenaline-fueled
+								action. Whether you're a seasoned gamer or a casual player looking for a quick
+								thrill, Moto X3M 3 is an excellent choice for a fun and challenging experience. So,
+								gear up, rev your engine, and prepare to take on the ultimate stunt challenge! </p>
+						</div>
+						<br>
+					</div>
+					<div class="col-md-3">
+						<div class="sidebar">
+							<div class="widget">
+								<h4 class="widget-title"><i aria-hidden="true" class="fa fa-plus"></i>FEATURED GAMES</h4>
+								<div class="row">
+									<div class="col-4 list-tile">
+										<a href="/game/2048">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="2048"
+													class="small-thumb" src="/imgs/2048.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/burritobisonlaunchalibre">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="burrito bison launcha libre"
+													class="small-thumb" src="/imgs/burritobisonlaunchalibre.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/basketball-stars">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="basketball stars"
+													class="small-thumb" src="/imgs/basketball-stars.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/bloonstd5">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="bloonstd 5"
+													class="small-thumb" src="/imgs/bloonstd5.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/motox3m">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="moto x3m"
+													class="small-thumb" src="/imgs/motox3m.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/nutsimulator">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="nut simulator"
+													class="small-thumb" src="/imgs/nutsimulator.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/snowrider3d">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="snow rider 3d"
+													class="small-thumb" src="/imgs/snowrider3d.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/stickmanboost">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="stickman boost"
+													class="small-thumb" src="/imgs/stickmanboost.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/vex5">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="vex 5" class="small-thumb"
+													src="/imgs/vex5.png">
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="widget">
+								<h4 class="widget-title"><i aria-hidden="true" class="fa fa-gamepad"></i>RANDOM
+									GAMES</h4>
+								<div class="row">
+									<div class="col-4 list-tile">
+										<a href="/game/worlds-hardest-game-2">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="worlds hardest game 2"
+													class="small-thumb" src="/imgs/worlds-hardest-game-2.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/endlesswar3">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="endlesswar 3"
+													class="small-thumb" src="/imgs/endlesswar3.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/ducklife3">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="duck life 3"
+													class="small-thumb" src="/imgs/ducklife3.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/penoire">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="penoire"
+													class="small-thumb" src="/imgs/penoire.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/temple-run-2">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="temple run 2"
+													class="small-thumb" src="/imgs/temple-run-2.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/papasdonuteria">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="papas donuteria"
+													class="small-thumb" src="/imgs/papasdonuteria.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/worlds-hardest-game">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="worlds hardest game"
+													class="small-thumb" src="/imgs/worlds-hardest-game.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/supergamemaker">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="super game maker"
+													class="small-thumb" src="/imgs/supergamemaker.png">
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-4 list-tile">
+										<a href="/game/burritobisonlaunchalibre">
+											<div class="list-game">
+												<div class="list-thumbnail"><img
+													alt="burrito bison launcha libre"
+													class="small-thumb" src="/imgs/burritobisonlaunchalibre.png">
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-container">
+			<h3 class="item-title"><i aria-hidden="true" class="fa fa-thumbs-up"></i>SIMILAR GAMES</h3>
+			<div class="grid-layout grid-wrapper">
+				<div class="grid-item item-grid">
+					<a href="/game/fireboywatergirlforesttemple">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter"
+								     class="small-thumb" src="/imgs/fireboywatergirlforesttemple.png">
+							</div>
+							<div class="list-title">
+								fireboy watergirl forest temple
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/papaswingeria">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/papaswingeria.png">
+							</div>
+							<div class="list-title">
+								papas wingeria
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/gunmayhem">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/gunmayhem.png">
+							</div>
+							<div class="list-title">
+								gun mayhem
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/houseofhazards">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/houseofhazards.png">
+							</div>
+							<div class="list-title">
+								house of hazards
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/papastacomia">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/papastacomia.png">
+							</div>
+							<div class="list-title">
+								papas tacomia
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/aglebrajump">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/aglebrajump.png">
+							</div>
+							<div class="list-title">
+								aglebra jump
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/tetris">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/tetris.png">
+							</div>
+							<div class="list-title">
+								tetris
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/territorial">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/territorial.png">
+							</div>
+							<div class="list-title">
+								territorial
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/elasticface">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/elasticface.png">
+							</div>
+							<div class="list-title">
+								elastic face
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/subway-surfers">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/subway-surfers.png">
+							</div>
+							<div class="list-title">
+								subway surfers
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/snake">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/snake.png">
+							</div>
+							<div class="list-title">
+								snake
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/cannon-basketball-4">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/cannon-basketball-4.png">
+							</div>
+							<div class="list-title">
+								cannon basketball 4
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/rooftop-snipers">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/rooftop-snipers.png">
+							</div>
+							<div class="list-title">
+								rooftop snipers
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/raftwars">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/raftwars.png">
+							</div>
+							<div class="list-title">
+								raft wars
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/bloxors">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/bloxors.png">
+							</div>
+							<div class="list-title">
+								bloxors
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/hoggy2">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/hoggy2.png">
+							</div>
+							<div class="list-title">
+								hoggy 2
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/motox3m">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/motox3m.png">
+							</div>
+							<div class="list-title">
+								moto x3m
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/fireboy-and-watergirl-2">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter"
+								     class="small-thumb" src="/imgs/fireboy-and-watergirl-2.png">
+							</div>
+							<div class="list-title">
+								fireboy and watergirl 2
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/guessthenumber">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/guessthenumber.png">
+							</div>
+							<div class="list-title">
+								guess the number
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/deathsoul">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/deathsoul.png">
+							</div>
+							<div class="list-title">
+								death soul
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/drifthunters">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/drifthunters.png">
+							</div>
+							<div class="list-title">
+								drift hunters
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/mineclone">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/mineclone.png">
+							</div>
+							<div class="list-title">
+								mine clone
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/vex3">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/vex3.png">
+							</div>
+							<div class="list-title">
+								vex 3
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="grid-item item-grid">
+					<a href="/game/drive-mad">
+						<div class="list-game">
+							<div class="list-thumbnail">
+								<img alt="Flower Shooter" class="small-thumb"
+								     src="/imgs/drive-mad.png">
+							</div>
+							<div class="list-title">
+								drive mad
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        function playGame(x) {
+            var win;
+            // document.querySelector('button').onclick = function() {
+            if (win) {
+                win.focus();
+            } else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = x;
+                win.document.body.appendChild(iframe);
+                var interval = setInterval(function () {
+                    if (win.closed) {
+                        clearInterval(interval);
+                        win = undefined;
+                    }
+                }, 500);
+            }
+        }
+	</script>
+	<script type="text/javascript">
+        function skip_play() {
+            $(".skip_screen").hide();
+            var lesson_link = "https://oc-fatih.github.io/g/" + atob('bW90b3gzbTM=');
+            $("#game-area").attr("src", lesson_link);
+        }
+	</script>
+	<div class="copyright py-4 text-center">
+		<div class="container">
+			<ul style="display: grid;list-style: none;float: right;grid-auto-flow: column;grid-gap: 0px;">
+				<li class="nav-item "><a class="nav-link" href="https://policies.google.com/privacy?hl=en-US"
+				                         target="_blank">Privacy Policy</a></li>
+				<li class="nav-item "><a class="nav-link" href="https://policies.google.com/terms?hl=en-US"
+				                         target="_blank">Terms Of Service</a></li>
+				<li class="nav-item ">Contact</li>
+			</ul>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+	        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+	        crossorigin="anonymous"
+	        referrerpolicy="no-referrer"></script>
+	<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/js/script.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
